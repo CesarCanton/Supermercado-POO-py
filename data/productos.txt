@@ -1,0 +1,9 @@
+id,nombre,precio,stock,categoria_id,activo
+1,Coca Cola 2L,1.50,25,1,True
+2,Jugo de Naranja,2.00,15,1,True
+3,Leche Entera,1.20,10,2,True
+4,Queso Mozzarella,3.50,5,2,True
+5,Arroz 1kg,0.90,40,3,True
+6,Frijoles 1kg,1.10,0,3,True
+7,Detergente 500g,2.75,8,4,True
+8,Jabon de Barra,0.65,0,4,True
