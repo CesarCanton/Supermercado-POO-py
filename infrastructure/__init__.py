@@ -1,6 +1,6 @@
-from .categoriaRepository import categoriaRepository
-from .facturaRepository import facturaRepository
-from .itemFacturaRepository import itemFacturaRepository
-from .productoRepository import productoRepository
-from .usuarioRepository import usuarioRepository
+# from .categoriaRepository import categoriaRepository
+# from .facturaRepository import facturaRepository
+# from .itemFacturaRepository import itemFacturaRepository
+# from .productoRepository import productoRepository
+# from .usuarioRepository import usuarioRepository
  
