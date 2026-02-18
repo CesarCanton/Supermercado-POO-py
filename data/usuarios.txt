@@ -1,4 +1,5 @@
-id,nombres,apellidos,username,contra,rol,primerIngreso
+id,nombres,apellidos,userName,contra,rol,primerIngreso
 1,Admin,Sistema,AS1,admin123,ADMIN,False
 2,Juan,Perez Lopez,PL2,cliente123,CLIENTE,True
 3,Maria,Gomez Ruiz,GR3,cliente456,CLIENTE,True
+4,Juku,Ruvu,JR4,aa,CLIENTE,False

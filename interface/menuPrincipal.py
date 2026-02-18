@@ -4,12 +4,14 @@ from services.authService import AuthService
 from interface.menuAdmin import mostrarMenuAdmin
 from interface.menuCliente import mostrarMenuCliente
 
+
 titulo = "\n\033[1;36;40m SUPER MERCADO \033[0m\n"
+repo = UsuarioRepository("data/usuarios.txt")
+authSer = AuthService(repo)
 
 def mostrarMenuPrincipal():
     os.system('cls')
-    repo = UsuarioRepository("data/usuarios.txt")
-    authSer = AuthService(repo)
+   
     
     print(titulo)
     print("\n\nElija una opcion\n\n")
@@ -18,7 +20,7 @@ def mostrarMenuPrincipal():
         try:
             opcion = int(input("1.Iniciar Sesion\n2.Salir\n"))
             if opcion == 1:
-                iniciarSesion(authSer)
+                iniciarSesion()
             elif opcion == 2:
                 print("Saliendo del sistema")
                 break
@@ -27,7 +29,7 @@ def mostrarMenuPrincipal():
         except ValueError:
             print("Error a la hora de ingresar el valor, vuelva a intentarlo")
 
-def iniciarSesion(authSer):
+def iniciarSesion():
     os.system('cls')
     print(titulo)
     print("\nINICIAR SESION\n")
@@ -38,17 +40,18 @@ def iniciarSesion(authSer):
             contra = input("\nContraseña:").strip()
             usuarioObj, error = authSer.login(usuario, contra)
             
-            if error:
+            if error or usuarioObj is None:
                 print("\nError de inicio de sesion")
+                continue
             
             match usuarioObj["rol"]:
                 case "ADMIN":
-                    print("Soy Admin")
                     mostrarMenuAdmin(usuarioObj)
+                    break
                     
                 case "CLIENTE":
-                    print("Soy Cliente")
                     mostrarMenuCliente(usuarioObj)
+                    break
                 case _:
                     print("Rol Indefinido")
                 
