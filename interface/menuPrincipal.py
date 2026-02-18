@@ -19,13 +19,14 @@ def mostrarMenuPrincipal():
     while True:
         try:
             opcion = int(input("1.Iniciar Sesion\n2.Salir\n"))
-            if opcion == 1:
-                iniciarSesion()
-            elif opcion == 2:
-                print("Saliendo del sistema")
-                break
-            else:
-                print("Opcion fuera del rango, vuelva a intentarlo")
+            match opcion:
+                case 1:
+                    iniciarSesion()
+                case 2:
+                    print("Saliendo del sistema")
+                    break
+                case _:    
+                    print("Opcion fuera del rango, vuelva a intentarlo")
         except ValueError:
             print("Error a la hora de ingresar el valor, vuelva a intentarlo")
 

@@ -28,8 +28,6 @@ def mostrarMenuCliente(usuario):
                     break
                 case _:
                     print("Opcion fuera del rango, vuelva a intentarlo")
-        
-        
         except:
             pass
         
